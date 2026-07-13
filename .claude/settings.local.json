@@ -60,7 +60,21 @@
       "mcp__visualize__show_widget",
       "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/color_check.png\" \"https://www.figma.com/api/mcp/asset/fb7026cf-c565-4127-b5e3-8e701e7a7ac4\")",
       "WebSearch",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "mcp__be313e11-ef71-4905-9860-444e0fe1011b__get_metadata",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/philosophy_check.png\" \"https://www.figma.com/api/mcp/asset/e06d7be0-81b0-4ade-98bd-7e534442d9c3\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/philosophy_fixed.png\" \"https://www.figma.com/api/mcp/asset/5663e5b4-4c4d-49b3-bb17-d5e9475fffd0\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/philosophy_mobile.png\" \"https://www.figma.com/api/mcp/asset/a1f5bc09-4cc3-4cd3-9f63-283030c09c13\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/menu_check.png\" \"https://www.figma.com/api/mcp/asset/8c266388-3f17-49b4-8669-85d8b2879e8f\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/menu_mobile.png\" \"https://www.figma.com/api/mcp/asset/b0bbbe85-3565-4e6f-a331-147027ccda1f\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/news_check.png\" \"https://www.figma.com/api/mcp/asset/33130d07-dda1-49f7-8960-4362154605dd\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/news_fixed.png\" \"https://www.figma.com/api/mcp/asset/0cd9669c-7ef9-41c7-8dc2-acd83ba0b986\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/news_mobile.png\" \"https://www.figma.com/api/mcp/asset/afe64de9-4fce-4eb9-9bf2-411ea3e022c4\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/process_check.png\" \"https://www.figma.com/api/mcp/asset/7c4260d7-d552-41b2-af9e-4f510086d3a6\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/process_mobile.png\" \"https://www.figma.com/api/mcp/asset/229e34ae-9340-4338-b15c-0d93c12490bf\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/footer_desktop.png\" \"https://www.figma.com/api/mcp/asset/7f2e8d52-a82a-4259-b1f0-570aece85b49\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/footer_mobile.png\" \"https://www.figma.com/api/mcp/asset/87c658e0-bcd3-4790-b81d-19b59e6d983e\")",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/full_desktop.png\" \"https://www.figma.com/api/mcp/asset/b4890cb5-0cad-4235-be0a-509bb42728a1\")"
     ]
   }
 }

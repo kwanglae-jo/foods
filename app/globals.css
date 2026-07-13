@@ -331,13 +331,14 @@ a {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  column-gap: 28px;
+  row-gap: 24px;
 }
 .field {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .field--full {
   grid-column: 1 / -1;
