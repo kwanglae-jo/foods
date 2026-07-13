@@ -339,18 +339,44 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 .menu-card--clear {
-  background: linear-gradient(160deg, #4a4530 0%, #121414 75%);
+  background-image: linear-gradient(
+      to top,
+      #121414 0%,
+      rgba(18, 20, 20, 0.6) 50%,
+      rgba(18, 20, 20, 0) 100%
+    ),
+    url("/menu/original.jpg");
 }
 .menu-card--spicy {
-  background: linear-gradient(160deg, #5c2418 0%, #121414 75%);
+  background-image: linear-gradient(
+      to top,
+      #121414 0%,
+      rgba(18, 20, 20, 0.6) 50%,
+      rgba(18, 20, 20, 0) 100%
+    ),
+    url("/menu/spicy.jpg");
 }
 .menu-card--mala {
-  background: linear-gradient(160deg, #4a1414 0%, #121414 75%);
+  background-image: linear-gradient(
+      to top,
+      #121414 0%,
+      rgba(18, 20, 20, 0.6) 50%,
+      rgba(18, 20, 20, 0) 100%
+    ),
+    url("/menu/mala.jpg");
 }
 .menu-card--tomato {
-  background: linear-gradient(160deg, #5c2e18 0%, #121414 75%);
+  background-image: linear-gradient(
+      to top,
+      #121414 0%,
+      rgba(18, 20, 20, 0.6) 50%,
+      rgba(18, 20, 20, 0) 100%
+    ),
+    url("/menu/tomato.jpg");
 }
 .menu-card__name {
   font-size: 24px;
