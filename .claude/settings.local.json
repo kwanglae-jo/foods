@@ -49,7 +49,16 @@
       "Bash(git commit --allow-empty -m ' *)",
       "Bash(curl -s -X POST https://foods-ecru.vercel.app/api/inquiry -H 'Content-Type: application/json' -d '{\"name\":\"프로덕션 재테스트\",\"phone\":\"010-9999-8888\",\"province\":\"서울\",\"district\":\"강남구\",\"budget\":\"1억원 ~ 1.5억원\",\"message\":\"환경변수 적용 후 재검증\"}' -w '\\\\nHTTP %{http_code}\\\\n')",
       "mcp__be313e11-ef71-4905-9860-444e0fe1011b__use_figma",
-      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version, require\\('./node_modules/react-dom/package.json'\\).version\\)\")"
+      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version, require\\('./node_modules/react-dom/package.json'\\).version\\)\")",
+      "Bash(git restore *)",
+      "Bash(grep -q \"^.claude/scheduled_tasks.lock$\")",
+      "Bash(bun --version)",
+      "Bash(bunx cursor-talk-to-figma-socket *)",
+      "mcp__TalkToFigma__join_channel",
+      "mcp__TalkToFigma__get_document_info",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/color_check.png\" \"https://www.figma.com/api/mcp/asset/fb7026cf-c565-4127-b5e3-8e701e7a7ac4\")"
     ]
   }
 }
