@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 export default function Nav() {
   return (
     <header className="nav">
       <div className="container nav__inner">
         <a href="#" className="nav__logo">
+          <Image src="/logo.png" alt="샤브광" width={28} height={28} priority />
           샤브광
         </a>
         <nav className="nav__links">

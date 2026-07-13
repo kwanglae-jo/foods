@@ -1,3 +1,4 @@
+import Image from "next/image";
 import InquiryForm from "./components/InquiryForm";
 import Reveal from "./components/Reveal";
 import AnimatedStat from "./components/AnimatedStat";
@@ -252,7 +253,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="container footer__inner">
-          <p className="footer__brand">샤브광</p>
+          <div className="footer__brand">
+            <Image src="/logo.png" alt="샤브광" width={32} height={32} />
+            샤브광
+          </div>
           <div className="footer__links">
             <a href="#">개인정보처리방침</a>
             <a href="#">이용약관</a>
