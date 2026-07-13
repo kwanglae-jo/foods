@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__be313e11-ef71-4905-9860-444e0fe1011b__get_design_context",
+      "mcp__be313e11-ef71-4905-9860-444e0fe1011b__get_screenshot",
+      "mcp__be313e11-ef71-4905-9860-444e0fe1011b__get_variable_defs",
+      "Bash(curl -sL -o shabu_desktop.png \"https://www.figma.com/api/mcp/asset/01ceef70-6feb-4200-a28c-cf7ba07887b3\")",
+      "Bash(npm -v)",
+      "Bash(curl -sL -o hero.jpg \"https://www.figma.com/api/mcp/asset/3bcd516e-b1e1-40dc-be69-de701360209f\")",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" -X POST http://localhost:3000/api/inquiry -H \"Content-Type: application/json\" -d '{\"phone\":\"010-1234-5678\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/inquiry -H \"Content-Type: application/json\" -d '{\"phone\":\"010-1234-5678\"}')",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" -X POST http://localhost:3000/api/inquiry -H \"Content-Type: application/json\" -d '{\"name\":\"홍길동\",\"phone\":\"010-1234-5678\",\"province\":\"서울\",\"budget\":\"5천만원 이하\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/inquiry -H \"Content-Type: application/json\" -d '{\"name\":\"홍길동\",\"phone\":\"010-1234-5678\",\"province\":\"서울\",\"budget\":\"5천만원 이하\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/inquiry -H 'Content-Type: application/json' -d '{\"name\":\"테스트 신청자\",\"phone\":\"010-1234-5678\",\"province\":\"서울\",\"district\":\"강남구\",\"budget\":\"5천만원 ~ 1억원\",\"message\":\"실제 메일 발송 테스트입니다.\"}' -w '\\\\nHTTP %{http_code}\\\\n')",
+      "mcp__mcp-registry__search_mcp_registry",
+      "Bash(npm run *)",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__list_teams",
+      "Read(//tmp/**)",
+      "Bash(base64 public/hero.jpg)",
+      "Bash(sips -s format jpeg -s formatOptions 72 public/hero.jpg --out /tmp/hero_optimized.jpg --resampleWidth 1600)",
+      "Bash(sips -s format jpeg -s formatOptions 45 public/hero.jpg --out /tmp/hero_optimized.jpg --resampleWidth 1280)",
+      "Bash(base64 -i /tmp/hero_optimized.jpg | tr -d '\\\\n' > /tmp/hero_b64_final.txt && wc -c /tmp/hero_b64_final.txt)",
+      "Bash(sips -s format jpeg -s formatOptions 30 public/hero.jpg --out /tmp/hero_small.jpg --resampleWidth 900)",
+      "Bash(sips -s format jpeg -s formatOptions 25 public/hero.jpg --out /tmp/hero_tiny.jpg --resampleWidth 640)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(sips -s format jpeg -s formatOptions 22 public/hero.jpg --out /tmp/hero_final.jpg --resampleWidth 480)",
+      "Bash(md5 -q /tmp/hero_final.jpg)",
+      "Bash(gh auth *)",
+      "Bash(git -C /Users/jogwanglae/Projects/foods status)",
+      "Bash(git --version)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}
