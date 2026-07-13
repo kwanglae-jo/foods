@@ -1,4 +1,7 @@
 import InquiryForm from "./components/InquiryForm";
+import Reveal from "./components/Reveal";
+import AnimatedStat from "./components/AnimatedStat";
+import Hero from "./components/Hero";
 
 const PHILOSOPHY = [
   {
@@ -45,26 +48,11 @@ const MENU = [
 ];
 
 const NEWS = [
-  {
-    date: "2026.07",
-    text: "샤브광, 신메뉴 '토마토 샤브' 출시",
-  },
-  {
-    date: "2026.06",
-    text: "샤브광, 가맹점 25호점 돌파",
-  },
-  {
-    date: "2026.05",
-    text: "샤브광, 상반기 우수 가맹점 3곳 선정",
-  },
-  {
-    date: "2026.04",
-    text: "샤브광, 지역 농가와 협업한 신선육수팩 공급 시작",
-  },
-  {
-    date: "2026.03",
-    text: "샤브광, 봄맞이 고객 감사 이벤트 진행",
-  },
+  { date: "2026.07", text: "샤브광, 신메뉴 '토마토 샤브' 출시" },
+  { date: "2026.06", text: "샤브광, 가맹점 25호점 돌파" },
+  { date: "2026.05", text: "샤브광, 상반기 우수 가맹점 3곳 선정" },
+  { date: "2026.04", text: "샤브광, 지역 농가와 협업한 신선육수팩 공급 시작" },
+  { date: "2026.03", text: "샤브광, 봄맞이 고객 감사 이벤트 진행" },
 ];
 
 const STEPS = [
@@ -107,37 +95,27 @@ const FAQS = [
 export default function Home() {
   return (
     <main>
-      {/* Hero */}
-      <section className="hero">
-        <div className="hero__bg" aria-hidden />
-        <div className="hero__inner">
-          <span className="badge">샤브광 가맹점 모집</span>
-          <h1 className="hero__title">샤브샤브에 공간을 더하다</h1>
-          <p className="hero__subtitle">
-            빠르게 먹고 나가는 식사가 아닌, 나를 위한 여유로운 한 끼 — 1인샤브샤브
-            전문 브랜드 샤브광과 함께하세요
-          </p>
-          <a href="#inquiry" className="btn-primary">
-            가맹 상담 문의하기
-          </a>
-        </div>
-      </section>
+      <Hero />
 
       {/* Philosophy */}
       <section className="section philosophy">
         <div className="container">
-          <h2 className="section-title">샤브광이 만드는 세 가지 기준</h2>
-          <p className="section-subtitle">
-            공간, 맛, 운영 — 세 가지가 맞물려야 오래가는 브랜드가 됩니다
-          </p>
+          <Reveal>
+            <h2 className="section-title">샤브광이 만드는 세 가지 기준</h2>
+            <p className="section-subtitle">
+              공간, 맛, 운영 — 세 가지가 맞물려야 오래가는 브랜드가 됩니다
+            </p>
+          </Reveal>
           <div className="philosophy-grid">
-            {PHILOSOPHY.map((p) => (
-              <div className="philosophy-card" key={p.num}>
-                <div className="philosophy-card__num">{p.num}</div>
-                <h3 className="philosophy-card__title">{p.title}</h3>
-                <p className="philosophy-card__subtitle">{p.subtitle}</p>
-                <p className="philosophy-card__desc">{p.desc}</p>
-              </div>
+            {PHILOSOPHY.map((p, i) => (
+              <Reveal key={p.num} delay={i * 0.1}>
+                <div className="philosophy-card hover-lift">
+                  <div className="philosophy-card__num">{p.num}</div>
+                  <h3 className="philosophy-card__title">{p.title}</h3>
+                  <p className="philosophy-card__subtitle">{p.subtitle}</p>
+                  <p className="philosophy-card__desc">{p.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -146,17 +124,21 @@ export default function Home() {
       {/* Menu */}
       <section className="section menu">
         <div className="container">
-          <h2 className="section-title">샤브광 시그니처 메뉴</h2>
-          <p className="section-subtitle">
-            매일 우려내는 육수로, 취향에 맞는 한 그릇을 완성합니다
-          </p>
+          <Reveal>
+            <h2 className="section-title">샤브광 시그니처 메뉴</h2>
+            <p className="section-subtitle">
+              매일 우려내는 육수로, 취향에 맞는 한 그릇을 완성합니다
+            </p>
+          </Reveal>
           <div className="menu-grid">
-            {MENU.map((m) => (
-              <div className="menu-card" key={m.name}>
-                <div className={`menu-card__swatch menu-card__swatch--${m.tone}`} />
-                <h3 className="menu-card__name">{m.name}</h3>
-                <p className="menu-card__desc">{m.desc}</p>
-              </div>
+            {MENU.map((m, i) => (
+              <Reveal key={m.name} delay={i * 0.08}>
+                <div className="menu-card hover-lift">
+                  <div className={`menu-card__swatch menu-card__swatch--${m.tone}`} />
+                  <h3 className="menu-card__name">{m.name}</h3>
+                  <p className="menu-card__desc">{m.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -165,13 +147,17 @@ export default function Home() {
       {/* News */}
       <section className="section news">
         <div className="container">
-          <h2 className="section-title">샤브광 소식</h2>
+          <Reveal>
+            <h2 className="section-title">샤브광 소식</h2>
+          </Reveal>
           <div className="news-list">
-            {NEWS.map((n) => (
-              <div className="news-item" key={n.date + n.text}>
-                <span className="news-item__date">{n.date}</span>
-                <span className="news-item__text">{n.text}</span>
-              </div>
+            {NEWS.map((n, i) => (
+              <Reveal key={n.date + n.text} delay={i * 0.06}>
+                <div className="news-item hover-shift">
+                  <span className="news-item__date">{n.date}</span>
+                  <span className="news-item__text">{n.text}</span>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -180,16 +166,20 @@ export default function Home() {
       {/* Process */}
       <section className="section process">
         <div className="container">
-          <h2 className="section-title">가맹 절차 안내</h2>
+          <Reveal>
+            <h2 className="section-title">가맹 절차 안내</h2>
+          </Reveal>
           <div className="process-grid">
-            {STEPS.map((step) => (
-              <div className="step" key={step.n}>
-                <div className="step__circle">{step.n}</div>
-                <div>
-                  <h3 className="step__title">{step.title}</h3>
-                  <p className="step__desc">{step.desc}</p>
+            {STEPS.map((step, i) => (
+              <Reveal key={step.n} delay={(i % 4) * 0.08}>
+                <div className="step hover-lift">
+                  <div className="step__circle">{step.n}</div>
+                  <div>
+                    <h3 className="step__title">{step.title}</h3>
+                    <p className="step__desc">{step.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -199,11 +189,15 @@ export default function Home() {
       <section className="section numbers">
         <div className="container">
           <div className="numbers-grid">
-            {NUMBERS.map((n) => (
-              <div className="stat" key={n.label}>
-                <div className="stat__value">{n.value}</div>
-                <div className="stat__label">{n.label}</div>
-              </div>
+            {NUMBERS.map((n, i) => (
+              <Reveal key={n.label} delay={i * 0.1}>
+                <div className="stat">
+                  <div className="stat__value">
+                    <AnimatedStat value={n.value} />
+                  </div>
+                  <div className="stat__label">{n.label}</div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -212,24 +206,32 @@ export default function Home() {
       {/* Inquiry */}
       <section className="section inquiry" id="inquiry">
         <div className="container">
-          <h2 className="section-title">가맹 상담 문의</h2>
-          <p className="section-subtitle">
-            희망 지역과 연락처를 남겨주시면 담당자가 빠르게 연락드립니다
-          </p>
-          <InquiryForm />
+          <Reveal>
+            <h2 className="section-title">가맹 상담 문의</h2>
+            <p className="section-subtitle">
+              희망 지역과 연락처를 남겨주시면 담당자가 빠르게 연락드립니다
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <InquiryForm />
+          </Reveal>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="section faq">
         <div className="container">
-          <h2 className="section-title">자주 묻는 질문</h2>
+          <Reveal>
+            <h2 className="section-title">자주 묻는 질문</h2>
+          </Reveal>
           <div className="faq-list">
-            {FAQS.map((f) => (
-              <div className="faq-item" key={f.q}>
-                <p className="faq-item__q">{f.q}</p>
-                <p className="faq-item__a">{f.a}</p>
-              </div>
+            {FAQS.map((f, i) => (
+              <Reveal key={f.q} delay={i * 0.06}>
+                <div className="faq-item hover-shift">
+                  <p className="faq-item__q">{f.q}</p>
+                  <p className="faq-item__a">{f.a}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -238,13 +240,15 @@ export default function Home() {
       {/* Final CTA */}
       <section className="section final-cta">
         <div className="container">
-          <h2 className="final-cta__title">지금, 샤브광과 함께 시작하세요</h2>
-          <p className="final-cta__subtitle">
-            희망 지역을 남기시면 담당자가 맞춤 상담을 도와드립니다
-          </p>
-          <a href="#inquiry" className="btn-primary">
-            가맹 상담 문의하기
-          </a>
+          <Reveal>
+            <h2 className="final-cta__title">지금, 샤브광과 함께 시작하세요</h2>
+            <p className="final-cta__subtitle">
+              희망 지역을 남기시면 담당자가 맞춤 상담을 도와드립니다
+            </p>
+            <a href="#inquiry" className="btn-primary">
+              가맹 상담 문의하기
+            </a>
+          </Reveal>
         </div>
       </section>
 
