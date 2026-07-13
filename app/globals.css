@@ -8,7 +8,8 @@
   --text-2: #c4c7c7;
   --placeholder: #8a8d8d;
   --border: rgba(255, 255, 255, 0.1);
-  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-strong: rgba(68, 71, 72, 0.3);
+  --border-gray: rgba(68, 71, 72, 0.2);
   --bg: #121414;
   --bg-2: rgba(255, 255, 255, 0.03);
   --bg-panel: rgba(26, 28, 28, 0.5);
@@ -59,10 +60,11 @@ a {
 }
 
 .eyebrow {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--accent);
+  letter-spacing: 0.2em;
+  color: var(--text-2);
   text-align: center;
   margin: 0 0 12px;
 }
@@ -106,10 +108,10 @@ a {
   justify-content: center;
   background: var(--accent);
   color: var(--accent-text);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 15px 24px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  padding: 16px 24px;
   border: none;
   border-radius: var(--radius-btn);
   cursor: pointer;
@@ -132,10 +134,10 @@ a {
   justify-content: center;
   background: transparent;
   color: var(--text);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 15px 28px;
+  letter-spacing: 0.1em;
+  padding: 17px 28px;
   border: 1px solid var(--text);
   border-radius: var(--radius-btn);
   cursor: pointer;
@@ -208,8 +210,8 @@ a {
   background: var(--accent);
   color: var(--accent-text);
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
   padding: 10px 20px;
   border-radius: var(--radius-btn);
   transition: background 0.15s ease;
@@ -282,21 +284,22 @@ a {
   padding: 32px 28px;
 }
 .philosophy-card__num {
-  color: var(--accent);
-  font-size: 20px;
+  color: rgba(226, 226, 226, 0.3);
+  font-size: 24px;
   font-weight: 500;
 }
 .philosophy-card__title {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
   font-size: 24px;
   font-weight: 500;
   color: var(--text);
   margin: 8px 0 14px;
 }
 .philosophy-card__desc {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-2);
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* ===== Menu ===== */
@@ -329,7 +332,7 @@ a {
 .menu-card {
   position: relative;
   height: 400px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border-gray);
   border-radius: var(--radius-card);
   padding: 24px;
   display: flex;
@@ -350,14 +353,14 @@ a {
   background: linear-gradient(160deg, #5c2e18 0%, #121414 75%);
 }
 .menu-card__name {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   color: var(--text);
   margin: 0 0 8px;
   white-space: pre-line;
 }
 .menu-card__desc {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-2);
   margin: 0;
 }
@@ -383,14 +386,14 @@ a {
   border-radius: var(--radius-btn);
 }
 .news-item__date {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--accent);
-  min-width: 72px;
+  min-width: 88px;
   flex-shrink: 0;
 }
 .news-item__text {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text);
 }
 
@@ -411,27 +414,27 @@ a {
   text-align: center;
 }
 .step__circle {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
 }
 .step__title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   color: var(--text);
   margin: 0 0 6px;
 }
 .step__desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-2);
   margin: 0;
 }
@@ -442,7 +445,7 @@ a {
 }
 .numbers-panel {
   background: var(--bg-panel);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border-gray);
   border-radius: var(--radius-card);
   padding: 40px;
 }
@@ -453,7 +456,7 @@ a {
   text-align: center;
 }
 .stat__value {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -463,12 +466,15 @@ a {
   gap: 2px;
 }
 .stat__suffix {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--text);
 }
 .stat__label {
-  font-size: 13px;
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
   color: var(--text-2);
   margin-top: 8px;
 }
@@ -504,18 +510,20 @@ a {
   grid-column: 1 / -1;
 }
 .field label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--text-2);
 }
 .field input,
 .field select,
 .field textarea {
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-strong);
+  background: transparent;
+  border: 1px solid rgba(68, 71, 72, 0.5);
   border-radius: var(--radius-btn);
   padding: 0 14px;
   height: 48px;
