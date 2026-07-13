@@ -58,7 +58,9 @@
       "mcp__TalkToFigma__get_document_info",
       "mcp__visualize__read_me",
       "mcp__visualize__show_widget",
-      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/color_check.png\" \"https://www.figma.com/api/mcp/asset/fb7026cf-c565-4127-b5e3-8e701e7a7ac4\")"
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/color_check.png\" \"https://www.figma.com/api/mcp/asset/fb7026cf-c565-4127-b5e3-8e701e7a7ac4\")",
+      "WebSearch",
+      "Bash(npx tsc *)"
     ]
   }
 }

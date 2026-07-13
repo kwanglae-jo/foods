@@ -144,35 +144,115 @@ a {
   margin: 0;
 }
 
-/* ===== Strengths ===== */
-.strengths {
+/* ===== Philosophy ===== */
+.philosophy {
   background: var(--bg);
 }
-.strength-grid {
+.philosophy-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.strength-card {
+.philosophy-card {
   background: var(--bg-2);
   border: 1px solid #eee;
   border-radius: var(--radius-card);
-  padding: 24px;
+  padding: 28px 24px;
 }
-.strength-card__num {
+.philosophy-card__num {
   color: var(--accent);
   font-size: 14px;
   font-weight: 700;
 }
-.strength-card__title {
-  font-size: 17px;
-  font-weight: 600;
-  margin: 12px 0 8px;
+.philosophy-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 14px 0 4px;
 }
-.strength-card__desc {
+.philosophy-card__subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+.philosophy-card__desc {
   font-size: 14px;
   color: var(--text-2);
   margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== Menu ===== */
+.menu {
+  background: var(--bg-2);
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.menu-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+.menu-card__swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.menu-card__swatch--clear {
+  background: #d9c9a3;
+}
+.menu-card__swatch--spicy {
+  background: #c9432a;
+}
+.menu-card__swatch--mala {
+  background: #8a1f1f;
+}
+.menu-card__swatch--tomato {
+  background: #e0563a;
+}
+.menu-card__name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.menu-card__desc {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== News ===== */
+.news {
+  background: var(--bg);
+}
+.news-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 18px 4px;
+  border-bottom: 1px solid #eee;
+}
+.news-item__date {
+  font-size: 13px;
+  color: var(--text-2);
+  min-width: 64px;
+  flex-shrink: 0;
+}
+.news-item__text {
+  font-size: 15px;
+  color: var(--text);
 }
 
 /* ===== Process ===== */
@@ -181,14 +261,14 @@ a {
 }
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 .step {
   background: #fff;
   border: 1px solid #eee;
   border-radius: var(--radius-card);
-  padding: 28px 16px;
+  padding: 24px 16px;
   text-align: center;
 }
 .step__circle {
@@ -379,7 +459,10 @@ a {
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .strength-grid {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .process-grid {
@@ -415,8 +498,12 @@ a {
   .section-title {
     font-size: 24px;
   }
-  .strength-grid {
+  .menu-grid {
     grid-template-columns: 1fr;
+  }
+  .news-item {
+    flex-direction: column;
+    gap: 4px;
   }
   .form-card {
     padding: 24px;
