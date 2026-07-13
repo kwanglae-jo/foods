@@ -2,48 +2,46 @@ import InquiryForm from "./components/InquiryForm";
 import Reveal from "./components/Reveal";
 import AnimatedStat from "./components/AnimatedStat";
 import Hero from "./components/Hero";
+import Nav from "./components/Nav";
 
 const PHILOSOPHY = [
   {
     num: "01",
     title: "공간",
-    subtitle: "혼자여도 편안한, 함께여도 자연스러운",
-    desc: "1인 좌석부터 테이블석까지, 원목 소재와 은은한 조명으로 오래 머무르고 싶은 공간을 설계했습니다.",
+    desc: "호텔 라운지를 연상케 하는 고급스러운 인테리어와 프라이빗한 다이닝 공간으로 특별한 순간을 완성합니다.",
   },
   {
     num: "02",
     title: "맛",
-    subtitle: "정성으로 우려낸 깊은 육수",
-    desc: "12시간 우려낸 육수와 매일 들여오는 신선한 재료로, 인공 조미료 없이도 깊은 맛을 냅니다.",
+    desc: "최상급 한우와 신선한 제철 채소, 그리고 오랜 시간 끓여낸 비법 육수가 만들어내는 깊은 풍미의 향연.",
   },
   {
     num: "03",
     title: "운영",
-    subtitle: "1인 사장님도 편안하게",
-    desc: "표준화된 조리 프로세스와 본사의 물류·교육 지원으로 초보 창업자도 안정적으로 운영합니다.",
+    desc: "체계적인 매장 관리 시스템과 전문적인 서비스 교육을 통해 언제나 최고 수준의 다이닝 경험을 제공합니다.",
   },
 ];
 
 const MENU = [
   {
     tone: "clear",
-    name: "샤브광 오리지널",
-    desc: "가다랑어와 다시마로 12시간 우려낸 담백한 육수. 재료 본연의 맛을 살린 샤브광의 시그니처입니다.",
+    name: "오리지널 맑은 육수",
+    desc: "깔끔하고 깊은 감칠맛의 정석",
   },
   {
     tone: "spicy",
-    name: "얼큰 샤브",
-    desc: "고추장과 고춧가루로 얼큰하게, 자극적이지 않으면서도 깊은 국물맛을 자랑합니다.",
+    name: "얼큰 육수",
+    desc: "칼칼하고 시원한 한국적인 매운맛",
   },
   {
     tone: "mala",
-    name: "마라 샤브",
-    desc: "사천식 마라향과 얼얼한 매운맛. 마라를 처음 접하는 분도 부담 없이 즐길 수 있습니다.",
+    name: "마라 육수",
+    desc: "알싸하고 중독적인 마라의 풍미",
   },
   {
     tone: "tomato",
-    name: "토마토 샤브",
-    desc: "토마토의 상큼함을 더한 산뜻한 육수. 가볍게 즐기고 싶은 날 부담 없는 한 끼입니다.",
+    name: "토마토 육수",
+    desc: "새콤달콤한 이국적인 매력",
   },
 ];
 
@@ -67,10 +65,10 @@ const STEPS = [
 ];
 
 const NUMBERS = [
-  { value: "38", label: "가맹 매장 수" },
-  { value: "72%", label: "재방문율" },
-  { value: "4,500만원", label: "평균 창업 비용" },
-  { value: "2개월", label: "평균 오픈 소요기간" },
+  { value: "38", suffix: "+", label: "가맹 예정 수" },
+  { value: "72", suffix: "%", label: "재방문율" },
+  { value: "4,500", suffix: "만", label: "평균 창업 비용" },
+  { value: "2", suffix: "개월", label: "평균 오픈 소요기간" },
 ];
 
 const FAQS = [
@@ -95,16 +93,16 @@ const FAQS = [
 export default function Home() {
   return (
     <main>
+      <Nav />
       <Hero />
 
       {/* Philosophy */}
-      <section className="section philosophy">
+      <section className="section philosophy" id="space">
         <div className="container">
           <Reveal>
-            <h2 className="section-title">샤브광이 만드는 세 가지 기준</h2>
-            <p className="section-subtitle">
-              공간, 맛, 운영 — 세 가지가 맞물려야 오래가는 브랜드가 됩니다
-            </p>
+            <p className="eyebrow">THE FOUNDATION</p>
+            <h2 className="section-title">세 가지 압도적 기준</h2>
+            <div className="divider" />
           </Reveal>
           <div className="philosophy-grid">
             {PHILOSOPHY.map((p, i) => (
@@ -112,7 +110,6 @@ export default function Home() {
                 <div className="philosophy-card hover-lift">
                   <div className="philosophy-card__num">{p.num}</div>
                   <h3 className="philosophy-card__title">{p.title}</h3>
-                  <p className="philosophy-card__subtitle">{p.subtitle}</p>
                   <p className="philosophy-card__desc">{p.desc}</p>
                 </div>
               </Reveal>
@@ -122,19 +119,25 @@ export default function Home() {
       </section>
 
       {/* Menu */}
-      <section className="section menu">
+      <section className="section menu" id="menu">
         <div className="container">
           <Reveal>
-            <h2 className="section-title">샤브광 시그니처 메뉴</h2>
-            <p className="section-subtitle">
-              매일 우려내는 육수로, 취향에 맞는 한 그릇을 완성합니다
-            </p>
+            <div className="menu-header">
+              <div>
+                <p className="eyebrow">SIGNATURE BROTHS</p>
+                <h2 className="section-title section-title--left">
+                  다채로운 육수의 향연
+                </h2>
+              </div>
+              <p className="menu-header__intro">
+                취향에 따라 선택할 수 있는 네 가지 시그니처 육수.
+              </p>
+            </div>
           </Reveal>
           <div className="menu-grid">
             {MENU.map((m, i) => (
               <Reveal key={m.name} delay={i * 0.08}>
-                <div className="menu-card hover-lift">
-                  <div className={`menu-card__swatch menu-card__swatch--${m.tone}`} />
+                <div className={`menu-card menu-card--${m.tone} hover-lift`}>
                   <h3 className="menu-card__name">{m.name}</h3>
                   <p className="menu-card__desc">{m.desc}</p>
                 </div>
@@ -148,7 +151,9 @@ export default function Home() {
       <section className="section news">
         <div className="container">
           <Reveal>
+            <p className="eyebrow">BRAND NEWS</p>
             <h2 className="section-title">샤브광 소식</h2>
+            <div className="divider" />
           </Reveal>
           <div className="news-list">
             {NEWS.map((n, i) => (
@@ -167,7 +172,9 @@ export default function Home() {
       <section className="section process">
         <div className="container">
           <Reveal>
+            <p className="eyebrow">FRANCHISE</p>
             <h2 className="section-title">가맹 절차 안내</h2>
+            <div className="divider" />
           </Reveal>
           <div className="process-grid">
             {STEPS.map((step, i) => (
@@ -188,33 +195,21 @@ export default function Home() {
       {/* Numbers */}
       <section className="section numbers">
         <div className="container">
-          <div className="numbers-grid">
-            {NUMBERS.map((n, i) => (
-              <Reveal key={n.label} delay={i * 0.1}>
-                <div className="stat">
-                  <div className="stat__value">
-                    <AnimatedStat value={n.value} />
+          <div className="numbers-panel">
+            <div className="numbers-grid">
+              {NUMBERS.map((n, i) => (
+                <Reveal key={n.label} delay={i * 0.1}>
+                  <div className="stat">
+                    <div className="stat__value">
+                      <AnimatedStat value={n.value} />
+                      <span className="stat__suffix">{n.suffix}</span>
+                    </div>
+                    <div className="stat__label">{n.label}</div>
                   </div>
-                  <div className="stat__label">{n.label}</div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Inquiry */}
-      <section className="section inquiry" id="inquiry">
-        <div className="container">
-          <Reveal>
-            <h2 className="section-title">가맹 상담 문의</h2>
-            <p className="section-subtitle">
-              희망 지역과 연락처를 남겨주시면 담당자가 빠르게 연락드립니다
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <InquiryForm />
-          </Reveal>
         </div>
       </section>
 
@@ -222,7 +217,9 @@ export default function Home() {
       <section className="section faq">
         <div className="container">
           <Reveal>
+            <p className="eyebrow">FAQ</p>
             <h2 className="section-title">자주 묻는 질문</h2>
+            <div className="divider" />
           </Reveal>
           <div className="faq-list">
             {FAQS.map((f, i) => (
@@ -237,32 +234,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="section final-cta">
+      {/* Inquiry */}
+      <section className="section inquiry" id="inquiry">
         <div className="container">
           <Reveal>
-            <h2 className="final-cta__title">지금, 샤브광과 함께 시작하세요</h2>
-            <p className="final-cta__subtitle">
-              희망 지역을 남기시면 담당자가 맞춤 상담을 도와드립니다
-            </p>
-            <a href="#inquiry" className="btn-primary">
-              가맹 상담 문의하기
-            </a>
+            <div className="inquiry-card">
+              <h2 className="section-title">가맹 상담 문의</h2>
+              <p className="section-subtitle">
+                희망 지역과 연락처를 남겨주시면 담당자가 빠르게 연락드립니다
+              </p>
+              <InquiryForm />
+            </div>
           </Reveal>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p className="footer__brand">샤브광 가맹본부</p>
-        <p className="footer__line">
-          상호명: (주)샤브광 | 대표: 홍길동 | 사업자등록번호: 000-00-00000
-        </p>
-        <p className="footer__line">
-          주소: 서울특별시 강남구 테헤란로 000 | 문의: 000-0000-0000
-        </p>
-        <p className="footer__line">이메일: contact@shabugwang.example.com</p>
-        <p className="footer__line">© 2026 샤브광. All rights reserved.</p>
+        <div className="container footer__inner">
+          <p className="footer__brand">샤브광</p>
+          <div className="footer__links">
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이용약관</a>
+            <a href="#">투자</a>
+            <a href="#inquiry">문의</a>
+          </div>
+          <p className="footer__line">
+            상호명: (주)샤브광 | 대표: 홍길동 | 사업자등록번호: 000-00-00000
+          </p>
+          <p className="footer__line">
+            주소: 서울특별시 강남구 테헤란로 000 | 문의: 000-0000-0000 | 이메일:
+            contact@shabugwang.example.com
+          </p>
+          <p className="footer__copyright">© 2026 샤브광. 빛나는 맛의 예술.</p>
+        </div>
       </footer>
     </main>
   );

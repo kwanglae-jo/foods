@@ -74,7 +74,9 @@
       "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/process_mobile.png\" \"https://www.figma.com/api/mcp/asset/229e34ae-9340-4338-b15c-0d93c12490bf\")",
       "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/footer_desktop.png\" \"https://www.figma.com/api/mcp/asset/7f2e8d52-a82a-4259-b1f0-570aece85b49\")",
       "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/footer_mobile.png\" \"https://www.figma.com/api/mcp/asset/87c658e0-bcd3-4790-b81d-19b59e6d983e\")",
-      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/full_desktop.png\" \"https://www.figma.com/api/mcp/asset/b4890cb5-0cad-4235-be0a-509bb42728a1\")"
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-jogwanglae-Projects-foods/33547a74-4dae-49d1-82d4-ff0bd3603160/scratchpad/full_desktop.png\" \"https://www.figma.com/api/mcp/asset/b4890cb5-0cad-4235-be0a-509bb42728a1\")",
+      "mcp__TalkToFigma__get_node_info",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
