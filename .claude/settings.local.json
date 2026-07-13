@@ -33,7 +33,16 @@
       "Bash(git init *)",
       "Bash(git branch *)",
       "Bash(git config *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__list_projects",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__list_deployments",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__get_deployment_build_logs",
+      "Bash(npm view *)",
+      "Bash(node -e ' *)",
+      "Bash(npm audit *)"
     ]
   }
 }
