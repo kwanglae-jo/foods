@@ -32,10 +32,10 @@ const STEPS = [
 ];
 
 const NUMBERS = [
-  { value: "00", label: "가맹 매장 수" },
-  { value: "00%", label: "재방문율" },
-  { value: "0000만원", label: "평균 창업 비용" },
-  { value: "00개월", label: "평균 오픈 소요기간" },
+  { value: "38", label: "가맹 매장 수" },
+  { value: "72%", label: "재방문율" },
+  { value: "4,500만원", label: "평균 창업 비용" },
+  { value: "2개월", label: "평균 오픈 소요기간" },
 ];
 
 const FAQS = [

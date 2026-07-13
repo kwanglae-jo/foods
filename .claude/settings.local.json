@@ -42,7 +42,14 @@
       "mcp__2562f784-eedc-40e2-8c84-274941b291f7__get_deployment_build_logs",
       "Bash(npm view *)",
       "Bash(node -e ' *)",
-      "Bash(npm audit *)"
+      "Bash(npm audit *)",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__get_deployment",
+      "Bash(curl -s -X POST https://foods-ecru.vercel.app/api/inquiry -H 'Content-Type: application/json' -d '{\"name\":\"프로덕션 테스트\",\"phone\":\"010-9999-8888\",\"province\":\"서울\",\"district\":\"강남구\",\"budget\":\"1억원 ~ 1.5억원\",\"message\":\"실배포 환경 메일발송 테스트\"}' -w '\\\\nHTTP %{http_code}\\\\n')",
+      "mcp__2562f784-eedc-40e2-8c84-274941b291f7__deploy_to_vercel",
+      "Bash(git commit --allow-empty -m ' *)",
+      "Bash(curl -s -X POST https://foods-ecru.vercel.app/api/inquiry -H 'Content-Type: application/json' -d '{\"name\":\"프로덕션 재테스트\",\"phone\":\"010-9999-8888\",\"province\":\"서울\",\"district\":\"강남구\",\"budget\":\"1억원 ~ 1.5억원\",\"message\":\"환경변수 적용 후 재검증\"}' -w '\\\\nHTTP %{http_code}\\\\n')",
+      "mcp__be313e11-ef71-4905-9860-444e0fe1011b__use_figma",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version, require\\('./node_modules/react-dom/package.json'\\).version\\)\")"
     ]
   }
 }
