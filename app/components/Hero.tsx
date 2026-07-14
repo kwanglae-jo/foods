@@ -23,6 +23,7 @@ export default function Hero() {
         <motion.a
           href="#menu"
           className="btn-outline"
+          data-gtm-label="메뉴 보기"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.98 }}
         >

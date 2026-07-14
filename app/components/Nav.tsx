@@ -1,4 +1,12 @@
 import Image from "next/image";
+import TrackedLink from "./TrackedLink";
+
+const NAV_LINKS = [
+  { href: "#space", label: "헤리티지" },
+  { href: "#menu", label: "메뉴" },
+  { href: "#space", label: "공간" },
+  { href: "#inquiry", label: "가맹점" },
+];
 
 export default function Nav() {
   return (
@@ -9,14 +17,15 @@ export default function Nav() {
           샤브광
         </a>
         <nav className="nav__links">
-          <a href="#space">헤리티지</a>
-          <a href="#menu">메뉴</a>
-          <a href="#space">공간</a>
-          <a href="#inquiry">가맹점</a>
+          {NAV_LINKS.map((link) => (
+            <TrackedLink key={link.label} href={link.href} gtmLabel={link.label}>
+              {link.label}
+            </TrackedLink>
+          ))}
         </nav>
-        <a href="#inquiry" className="nav__cta">
+        <TrackedLink href="#inquiry" className="nav__cta" gtmLabel="제휴 문의">
           제휴 문의
-        </a>
+        </TrackedLink>
       </div>
     </header>
   );

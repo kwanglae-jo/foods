@@ -138,6 +138,7 @@ export default function InquiryForm() {
       <button
         type="submit"
         className="btn-primary form-submit"
+        data-gtm-label="가맹 상담 신청하기"
         disabled={status === "loading"}
       >
         {status === "loading" ? "전송 중..." : "가맹 상담 신청하기"}
