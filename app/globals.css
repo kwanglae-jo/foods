@@ -59,6 +59,11 @@ a {
   padding: 96px 0;
 }
 
+.page-header {
+  padding: 160px 0 40px;
+  text-align: center;
+}
+
 .eyebrow {
   font-family: "Pretendard Variable", "Pretendard", sans-serif;
   font-size: 12px;
