@@ -6,7 +6,7 @@ const description =
   "작은 매장, 낮은 창업비용, 확실한 아이템 — 1인샤브샤브 전문 브랜드 샤브광 가맹 상담을 신청하세요.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foods-kwangkwang.vercel.app"),
+  metadataBase: new URL("https://foods-ecru.vercel.app"),
   title,
   description,
   openGraph: {
