@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import TrackedLink from "./TrackedLink";
 
 const NAV_LINKS = [
@@ -13,10 +14,10 @@ export default function Nav() {
   return (
     <header className="nav">
       <div className="container nav__inner">
-        <a href="/" className="nav__logo">
+        <Link href="/" className="nav__logo">
           <Image src="/logo.png" alt="샤브광" width={28} height={28} priority />
           샤브광
-        </a>
+        </Link>
         <nav className="nav__links">
           {NAV_LINKS.map((link) => (
             <TrackedLink key={link.label} href={link.href} gtmLabel={link.label}>

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,7 @@ export default function AdminLoginPage() {
     const res = await fetch("/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     if (!res.ok) {
@@ -39,12 +39,13 @@ export default function AdminLoginPage() {
         <h1 className="section-title">관리자 로그인</h1>
         <form className="form-card" onSubmit={handleSubmit}>
           <div className="field field--full">
-            <label htmlFor="username">아이디</label>
+            <label htmlFor="email">이메일</label>
             <input
-              id="username"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              id="email"
+              type="email"
+              autoComplete="username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -53,20 +54,21 @@ export default function AdminLoginPage() {
             <input
               id="password"
               type="password"
+              autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <button
-            type="submit"
-            className="btn-primary form-submit"
-            disabled={loading}
-          >
+          <button type="submit" className="btn-primary form-submit" disabled={loading}>
             {loading ? "확인 중..." : "로그인"}
           </button>
           {error && <p className="form-message form-message--err">{error}</p>}
         </form>
+        <p className="press-admin-hint">
+          계정이 없다면 Supabase Dashboard에서 초대받은 이메일로 로그인하세요. 설정 방법은{" "}
+          <code>supabase/README.md</code> 참고.
+        </p>
       </div>
     </main>
   );

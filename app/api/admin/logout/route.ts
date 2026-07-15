@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
-import { SESSION_COOKIE } from "../../../../lib/auth";
+import { createServerSupabaseClient } from "../../../../lib/supabase/server";
 
 export async function POST() {
-  const res = NextResponse.json({ ok: true });
-  res.cookies.set(SESSION_COOKIE, "", { path: "/", maxAge: 0 });
-  return res;
+  try {
+    const supabase = await createServerSupabaseClient();
+    await supabase.auth.signOut();
+  } catch {
+    // Supabase 미설정 상태에서도 로그아웃 요청 자체는 성공으로 처리한다.
+  }
+  return NextResponse.json({ ok: true });
 }
